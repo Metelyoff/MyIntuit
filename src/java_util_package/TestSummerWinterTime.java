@@ -7,15 +7,8 @@ import java.util.TimeZone;
 public class TestSummerWinterTime {
 	public static void main(String[] args) {
 		TestSummerWinterTime test = new TestSummerWinterTime();
-		SimpleTimeZone stz = new SimpleTimeZone(TimeZone.getDefault().getRawOffset(), 
-				TimeZone.getDefault().getID(),
-				Calendar.MARCH,
-				-1, 
-				Calendar.SUNDAY, 
-				test.getTime(2, 0, 0, 0), 
-				Calendar.OCTOBER, 
-				-1, 
-				Calendar.SUNDAY,
+		SimpleTimeZone stz = new SimpleTimeZone(TimeZone.getDefault().getRawOffset(), TimeZone.getDefault().getID(),
+				Calendar.MARCH, -1, Calendar.SUNDAY, test.getTime(2, 0, 0, 0), Calendar.OCTOBER, -1, Calendar.SUNDAY,
 				test.getTime(3, 0, 0, 0));
 		System.out.println(stz.toString());
 	}

@@ -1,16 +1,15 @@
 package java_io_package;
+
 import java.io.*;
 
-public class TestByteArrayStream
-{
-	public static void main(String[] args)
-	{
-		byte[] bytes = {1,-1,0};
-		ByteArrayInputStream in = new ByteArrayInputStream(bytes); 
+public class TestByteArrayStream {
+	public static void main(String[] args) {
+		byte[] bytes = { 1, -1, 0 };
+		ByteArrayInputStream in = new ByteArrayInputStream(bytes);
 		int readedInt = in.read(); // readedInt=1
 		System.out.println("first element read is: " + readedInt);
 		readedInt = in.read();
-		// readedInt=255. Однако 
+		// readedInt=255. Однако
 		// (byte)readedInt даст значение -1
 		System.out.println("second element read is: " + readedInt);
 		readedInt = in.read(); // readedInt=0

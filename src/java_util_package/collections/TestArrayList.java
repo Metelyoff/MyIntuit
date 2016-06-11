@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 public class TestArrayList {
 	public static void main(String[] args) {
-		//List l = Collections.synchronizedList(new ArrayList(...)); 
+		// List l = Collections.synchronizedList(new ArrayList(...));
 		TestArrayList t = new TestArrayList();
 		ArrayList<String> al = new ArrayList<>();
 		al.add("First element");

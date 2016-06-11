@@ -1,9 +1,9 @@
 package java_io_package;
+
 import java.io.*;
 
-public class TestPipedStream
-{
-	public static void main(String[] args){
+public class TestPipedStream {
+	public static void main(String[] args) {
 		try {
 			int countRead = 0;
 			byte[] toRead = new byte[100];
@@ -11,27 +11,27 @@ public class TestPipedStream
 			PipedOutputStream pipeOut = new PipedOutputStream(pipeIn);
 
 			// Считывать в массив, пока он полностью не будет заполнен
-			while(countRead<toRead.length) {
+			while (countRead < toRead.length) {
 
 				// Записать в поток некоторое количество байт
-				for(int i=0; i<(Math.random()*10); i++) {
-					pipeOut.write((byte)(Math.random()*127));
+				for (int i = 0; i < (Math.random() * 10); i++) {
+					pipeOut.write((byte) (Math.random() * 127));
 				}
 
-				// Считать из потока доступные данные, 
+				// Считать из потока доступные данные,
 				// добавить их к уже считанным.
 				int willRead = pipeIn.available();
-				if(willRead+countRead>toRead.length)
+				if (willRead + countRead > toRead.length)
 
-				//Нужно считать только до предела массива
-				willRead = toRead.length-countRead;
+					// Нужно считать только до предела массива
+					willRead = toRead.length - countRead;
 				countRead += pipeIn.read(toRead, countRead, willRead);
 			}
-			for(byte b:toRead){
-				System.out.print(b+" ");
+			for (byte b : toRead) {
+				System.out.print(b + " ");
 			}
 		} catch (IOException e) {
-			System.out.println ("Impossible IOException occur: ");
+			System.out.println("Impossible IOException occur: ");
 			e.printStackTrace();
 		}
 	}

@@ -27,8 +27,8 @@ class MyParentException {
 	}
 }
 
-public class MyExceptions extends MyParentException{
-	int testLength(SizeOfAnything size){
+public class MyExceptions extends MyParentException {
+	int testLength(SizeOfAnything size) {
 		return 1;
 	}
 }

@@ -4,11 +4,11 @@ public class TestIfElseClass {
 
 	public static void main(String[] args) {
 		TestIfElseClass ifElse = new TestIfElseClass();
-		System.out.println("ANY, 1: "+ifElse.check("ANY", 1));
-		System.out.println("NO, 2: "+ifElse.check("NO", 2));
-		System.out.println("YES, 1: "+ifElse.check("YES", 1));
-		System.out.println("YES, 2: "+ifElse.check("YES", 2));
-		System.out.println("YES, 6: "+ifElse.check("ANY", 6));
+		System.out.println("ANY, 1: " + ifElse.check("ANY", 1));
+		System.out.println("NO, 2: " + ifElse.check("NO", 2));
+		System.out.println("YES, 1: " + ifElse.check("YES", 1));
+		System.out.println("YES, 2: " + ifElse.check("YES", 2));
+		System.out.println("YES, 6: " + ifElse.check("ANY", 6));
 	}
 
 	private int check(String x, int n) {

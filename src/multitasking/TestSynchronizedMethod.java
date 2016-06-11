@@ -11,10 +11,10 @@ public class TestSynchronizedMethod implements Runnable {
 	}
 
 	public void run() {
-		//shared.process();
+		// shared.process();
 		synchronized (shared) {
-		      shared.process();
-		   }
+			shared.process();
+		}
 	}
 
 	public static void main(String s[]) {

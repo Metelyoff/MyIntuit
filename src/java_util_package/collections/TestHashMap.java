@@ -22,8 +22,10 @@ public class TestHashMap {
 	}
 
 	public static void main(String[] args) {
-		/*HashMap hm = new HashMap();
-		Map syncMap = Collections.synchronizedMap(hm);*/
+		/*
+		 * HashMap hm = new HashMap(); Map syncMap =
+		 * Collections.synchronizedMap(hm);
+		 */
 		TestHashMap t = new TestHashMap();
 		TestObject to = null;
 		HashMap<String, TestObject> hm = new HashMap<>();
@@ -33,7 +35,7 @@ public class TestHashMap {
 		to = (TestObject) hm.get("Key1");
 		System.out.println("Object value for Key1 = " + to.getText() + "\n");
 		System.out.println("Iteration over entrySet");
-		Map.Entry<String,TestObject> entry = null;
+		Map.Entry<String, TestObject> entry = null;
 		Iterator<?> it = hm.entrySet().iterator();
 		// Итератор для перебора всех точек входа в Map
 		while (it.hasNext()) {
